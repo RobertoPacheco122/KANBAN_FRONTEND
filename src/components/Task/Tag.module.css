@@ -1,0 +1,8 @@
+.taskTag {
+  padding: 0.4rem;
+  display: inline-block;
+  border-radius: 0.4rem;
+  color: #ffffff;
+  font-size: 0.7rem;
+  margin-bottom: 1rem;
+}

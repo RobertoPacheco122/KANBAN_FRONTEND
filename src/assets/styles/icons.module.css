@@ -1,0 +1,27 @@
+.iconBigCross {
+  background-image: url("../images/icons/big_cross.png");
+}
+
+.iconResponsable {
+  background-image: url("../images/icons/users.png");
+}
+
+.iconTags {
+  background-image: url("../images/icons/tags.png");
+}
+
+.iconPriority {
+  background-image: url("../images/icons/tags.png");
+}
+
+.iconCalendar {
+  background-image: url("../images/icons/calendar.png");
+}
+
+.iconList {
+  background-image: url("../images/icons/list.png");
+}
+
+.iconSubtask {
+  background-image: url("../images/icons/subtask.png");
+}

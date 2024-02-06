@@ -1,0 +1,33 @@
+:root {
+  --header-bg: #74b2f8;
+  --board-bg: #ffffff;
+  --list-bg: #eef2f9;
+  --task-bg: #ffffff;
+
+  --low-priority-bg: #7ab0f9;
+  --medium-priority-bg: #80d5dd;
+  --high-priority-bg: #d17cd2;
+
+  --primary-font-color: rgb(83, 83, 83);
+
+  --font-default: sans-serif;
+  --container-pd: 2rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-default);
+  color: var(--primary-font-color);
+  overflow: hidden;
+}
+
+.container1 {
+  padding: 2rem;
+}
+
+textarea {
+  font-family: var(--font-default);
+}

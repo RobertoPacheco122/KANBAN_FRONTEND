@@ -1,9 +1,11 @@
 import React from "react";
+import Board from "./pages/Board/Board";
+import "./App.module.css";
 
 function App() {
   return (
     <div>
-      <h1>Hello World</h1>
+      <Board />
     </div>
   );
 }

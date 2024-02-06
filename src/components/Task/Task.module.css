@@ -1,0 +1,102 @@
+.taskCard {
+  background-color: var(--task-bg);
+  border-radius: 0.4rem;
+  margin-bottom: 0.5rem;
+  padding: 0.7rem 0px;
+  border: 1px solid rgb(223, 223, 223);
+}
+
+.taskCard:hover {
+  cursor: pointer;
+}
+
+.taskHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.taskInfos {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.taskContent {
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid rgb(223, 223, 223);
+}
+
+.container {
+  padding: 0px 0.7rem;
+}
+
+.iconOptions {
+  background: url("../../assets/images/icons/options.png") center/cover
+    no-repeat;
+  width: 15px;
+  height: 15px;
+  display: block;
+}
+
+.iconOptions:hover {
+  cursor: pointer;
+}
+
+.taskTitle {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.taskDescription {
+  margin-bottom: 1rem;
+  word-break: break-word;
+}
+
+.icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  opacity: 0.7;
+}
+
+.taskFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.taskFooterSubtask {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.subtaskIcon {
+  width: 17px;
+  height: 17px;
+  background: url("../../assets/images/icons/subtask.png") center/cover
+    no-repeat;
+}
+
+.taskResponsablesContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.taskAddResponsableIcon {
+  background: url("../../assets/images/icons/add.png") center/cover no-repeat;
+  opacity: 0.5;
+}
+
+.taskAddResponsableIcon:hover {
+  cursor: pointer;
+}
+
+.taskResponsable {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: url("../../assets/images/icons/user_test.webp") center/cover
+    no-repeat;
+  border-radius: 50%;
+}
