@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./List.module.css";
 import Task, { ITask } from "../Task/Task";
 import { IBaseEntity } from "../../types/commonTypes";
+import { LIST_UPDATE } from "../../services/api/List";
 
 export interface IList extends IBaseEntity {
   name: string;
@@ -11,19 +12,45 @@ export interface IList extends IBaseEntity {
 
 interface ListProps {
   listId: string;
+  boardId: string;
   name: string;
-  boardId: number;
   tasks: ITask[] | undefined;
 }
 
-const List = ({ listId, name, tasks }: ListProps) => {
+const List = ({ listId, boardId, name, tasks }: ListProps) => {
+  const [listName, setListName] = React.useState(name);
+
+  const handleListNameChange = ({ value }: EventTarget & HTMLInputElement) => {
+    setListName(value);
+  };
+
+  const handleListNameFocusOut = async ({
+    value,
+  }: EventTarget & HTMLInputElement) => {
+    const { enpoint, options } = LIST_UPDATE({
+      id: listId,
+      name: value,
+      boardId: boardId,
+      isDeleted: false,
+    });
+
+    const request = await fetch(enpoint, options);
+    const serverResponseStatus = request.status;
+
+    if (serverResponseStatus !== 204)
+      console.log("Ocorreu algum erro ao atualizar o nome da List");
+    else console.log("Nome da List atualizado com sucesso");
+  };
+
   return (
     <div className={styles.listContainer}>
       <div className={styles.listNameContainer}>
         <input
           type="text"
           name="listName"
-          value={name}
+          value={listName}
+          onChange={({ target }) => handleListNameChange(target)}
+          onBlur={({ target }) => handleListNameFocusOut(target)}
           className={styles.listName}
         />
         <i className={`${styles.icon} ${styles.iconOptions}`}></i>
