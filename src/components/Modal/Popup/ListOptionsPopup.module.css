@@ -1,0 +1,51 @@
+.popupContainer {
+  background-color: #ffffff;
+  border: 1px solid rgb(233, 233, 233);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  width: 170px;
+}
+
+.popupName {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.popupItem {
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.7rem;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+}
+
+.popupItem:hover {
+  cursor: pointer;
+  background-color: rgb(235, 235, 235);
+}
+
+.popupItem:last-child {
+  margin-bottom: 0px;
+}
+
+.iconPopup {
+  display: inline-block;
+  height: 18px;
+  width: 18px;
+}
+
+.iconEdit {
+  background: url("../../../assets/images/icons/edit.svg") center/cover
+    no-repeat;
+}
+
+.iconDelete {
+  background: url("../../../assets/images/icons/trash.svg") center/cover
+    no-repeat;
+}
+
+.iconAdd {
+  background: url("../../../assets/images/icons/add.svg") center/cover no-repeat;
+}
